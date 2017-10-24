@@ -11,7 +11,6 @@ MongoClient.connect(url, (err, db) => {
   const carouselPhotos = db.collection('carouselPhotos')
 
   app.use(express.static('./public'))
-  app.use(express.static('./public/upload'))
 
   app.get('/carouselPhotos', (req, res) => {
     carouselPhotos

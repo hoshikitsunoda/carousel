@@ -10,8 +10,8 @@ MongoClient.connect(url, (err, db) => {
 
   carouselPhotos
     .insertMany([
-      { id: 1, url: 'public/upload/tanaami.jpg'},
-      { id: 2, url: 'public/upload/tanaami2.jpg'},
-      { id: 3, url: 'public/upload/tanaami3.jpg'}
+      { id: 1, url: 'upload/tanaami.jpg'},
+      { id: 2, url: 'upload/tanaami2.jpg'},
+      { id: 3, url: 'upload/tanaami3.jpg'}
     ])
 })
