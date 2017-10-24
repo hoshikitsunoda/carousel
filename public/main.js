@@ -4,4 +4,9 @@ const renderPhoto = (image) => {
   return $photo
 }
 
+const fetchPhoto = () => {
+  return fetch('/carouselPhotos')
+    .then(res => res.json)
+}
+
 document.body.appendChild(renderPhoto())
