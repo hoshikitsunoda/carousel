@@ -4,7 +4,9 @@
   "description": "An app that shows a slideshow of multiple pictures.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "nodemon index.js",
+    "seed": "node seed.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +18,12 @@
   "bugs": {
     "url": "https://github.com/hoshikitsunoda/carousel/issues"
   },
-  "homepage": "https://github.com/hoshikitsunoda/carousel#readme"
+  "homepage": "https://github.com/hoshikitsunoda/carousel#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "mongodb": "^2.2.33"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  }
 }
