@@ -28,6 +28,7 @@ setInterval(function() {
 //   const $box = document.createElement('div')
 //   const $photo = document.createElement('img')
 //   $photo.src = image.url
+//   $photo.setAttribute('class', 'hidden')
 //   $box.appendChild($photo)
 //   return $box
 // }
@@ -56,3 +57,8 @@ setInterval(function() {
 // }
 //
 // displayImage()
+//
+// setInterval(() => {
+//   const $photo = document.getElementsByClassName('hidden')
+//   $photo.classList.remove('hidden')
+// }, 1000)
