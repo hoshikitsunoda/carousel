@@ -29,6 +29,30 @@ body {
     -0.3rem 0.1rem 1rem grey;
 }
 
+#circle1,
+#circle2,
+#circle3 {
+  position: absolute;
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 50%;
+  border: 0.1rem solid #232423;
+  top: 83%;
+  transform: translateX(-50%);
+}
+
+#circle1 {
+  left: 48%;
+}
+
+#circle2 {
+  left: 50%;
+}
+
+#circle3 {
+  left: 52%;
+}
+
 #arrow-left,
 #arrow-right {
   position: absolute;
