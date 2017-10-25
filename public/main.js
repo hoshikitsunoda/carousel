@@ -13,6 +13,14 @@ slides().then(documents => (carousel.slides = documents))
 const $leftArrow = document.getElementById('arrow-left')
 const $rightArrow = document.getElementById('arrow-right')
 
+$leftArrow.addEventListener('click', () => {
+
+})
+
+$rightArrow.addEventListener('click', () => {
+
+})
+
 // setInterval(function() {
 //   document
 //     .querySelector('.slide')
