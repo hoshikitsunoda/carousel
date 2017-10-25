@@ -37,7 +37,7 @@ body {
   width: 0.5rem;
   border-radius: 50%;
   border: 0.1rem solid #232423;
-  top: 83%;
+  top: 84%;
   transform: translateX(-50%);
 }
 
@@ -51,6 +51,10 @@ body {
 
 #circle3 {
   left: 52%;
+}
+
+.shade {
+  background-color: grey;
 }
 
 #arrow-left,
