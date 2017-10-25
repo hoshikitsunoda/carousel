@@ -8,31 +8,57 @@ const carousel = {
   current: 0
 }
 
-slides().then(documents => (carousel.slides = documents))
+const cycle = {
+  slides: null,
+  left: 0,
+  right: 2
+}
+
+slides()
+  .then(documents => (carousel.slides = documents))
+  .then(documents => (cycle.slides = documents))
 
 const $leftArrow = document.getElementById('arrow-left')
 const $rightArrow = document.getElementById('arrow-right')
 
 $leftArrow.addEventListener('click', () => {
+  document
+    .querySelector('.slide')
+    .setAttribute('src', `${cycle.slides[cycle.right].url}`)
 
+    if (cycle.right < cycle.slides.length - 1) {
+      cycle.right++
+    }
+    else {
+      cycle.right = 0
+    }
 })
 
 $rightArrow.addEventListener('click', () => {
+  document
+    .querySelector('.slide')
+    .setAttribute('src', `${cycle.slides[cycle.left].url}`)
 
+    if (cycle.left < cycle.slides.length - 1) {
+      cycle.left++
+    }
+    else {
+      cycle.left = 0
+    }
 })
 
-// setInterval(function() {
-//   document
-//     .querySelector('.slide')
-//     .setAttribute('src', `${carousel.slides[carousel.current].url}`)
-//
-//     if (carousel.current < carousel.slides.length - 1) {
-//       carousel.current++
-//     }
-//     else {
-//       carousel.current = 0
-//     }
-// }, 3000)
+setInterval(function() {
+  document
+    .querySelector('.slide')
+    .setAttribute('src', `${carousel.slides[carousel.current].url}`)
+
+    if (carousel.current < carousel.slides.length - 1) {
+      carousel.current++
+    }
+    else {
+      carousel.current = 0
+    }
+}, 3000)
 
 // const renderPhoto = (image) => {
 //   console.log(image)
