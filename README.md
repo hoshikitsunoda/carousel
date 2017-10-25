@@ -1,7 +1,7 @@
 # carousel
 An app that shows a slideshow of multiple pictures.
 ## Usage
-``bash
+``
 $ node index.js
 ``
 ## Uses
