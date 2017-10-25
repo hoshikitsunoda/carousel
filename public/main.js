@@ -10,18 +10,21 @@ const carousel = {
 
 slides().then(documents => (carousel.slides = documents))
 
-setInterval(function() {
-  document
-    .querySelector('.slide')
-    .setAttribute('src', `${carousel.slides[carousel.current].url}`)
+const $leftArrow = document.getElementById('arrow-left')
+const $rightArrow = document.getElementById('arrow-right')
 
-    if (carousel.current < carousel.slides.length - 1) {
-      carousel.current++
-    }
-    else {
-      carousel.current = 0
-    }
-}, 3000)
+// setInterval(function() {
+//   document
+//     .querySelector('.slide')
+//     .setAttribute('src', `${carousel.slides[carousel.current].url}`)
+//
+//     if (carousel.current < carousel.slides.length - 1) {
+//       carousel.current++
+//     }
+//     else {
+//       carousel.current = 0
+//     }
+// }, 3000)
 
 // const renderPhoto = (image) => {
 //   console.log(image)
